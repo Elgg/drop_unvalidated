@@ -10,7 +10,7 @@ elgg_register_event_handler('init', 'system', 'drop_unvalidated_init');
  */
 function drop_unvalidated_init() {
 	$period = 'hourly';
-	register_plugin_hook('cron', $period, 'drop_unvalidated_cron');
+	elgg_register_plugin_hook_handler('cron', $period, 'drop_unvalidated_cron');
 }
 
 /**
